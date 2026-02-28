@@ -1,0 +1,19 @@
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/home/ollama/data
+    environment:
+      - OLLAMA_MODELS=/home/ollama/data/models
+      - OLLAMA_CONTEXT_LENGTH=64000
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+volumes:
+  ollama-data:
