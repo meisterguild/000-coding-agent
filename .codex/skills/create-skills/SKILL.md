@@ -1,9 +1,9 @@
 ---
-name: skills-management
+name: create-skills
 description: 再現性のあるオペレーションをskillsとして追加する
 ---
 
-# Skills Management
+# Create Skills
 
 ## Overview
 再現性のあるオペレーションをskillsとして追加する
