@@ -1,22 +1,20 @@
 ---
 name: development-process
-description: プロジェクトの進め方。1.要件定義、2.工数見積もり、3.スコープ定義、4.設計、5.タスク分割、6.実装、7.動作確認
+description: 開発の進め方。1.要件定義、2.工数見積もり、3.スコープ定義、4.設計、5.タスク分割、6.実装、7.動作確認
 ---
 
 # Development Process
 
 ## Overview
 
-プロジェクトを進めるための基本フローを定義する
+開発を進めるための基本フローを定義する
 各ステップを順番に実行すること
-ただし、次のステップに進むには成果物に対する人間の承認が必要
-成果物を作成したら次のステップに進まず人間に成果物を提出し、承認を得ること
+次のステップに進むには成果物に対する人間の承認が必要
 
 ## Rules
 
-- 各ステップが完了したら、必ずその成果物を提示し、「レビュー依頼」を出して作業を停止すること
+- 各ステップが完了したらその成果物を提示し、「レビュー依頼」を出して作業を停止すること
 - レビューで「承認」と明示されるまで、次のステップに進んではならない
-- 承認がない状態で次工程に進むことは禁止
 - 自律的に最後まで進めないこと
 - 必ず人間の確認待ち状態で止まること
 
@@ -29,28 +27,28 @@ description: プロジェクトの進め方。1.要件定義、2.工数見積も
 - 1時間
 
 ## Steps
-
+0. プロジェクト番号の発行
 1. 要件定義
    - 目的、期待成果、制約を明確化する
-   - 成果物：docs/requirements.md
+   - 成果物：docs/{project-number}/requirements.md
 2. 工数見積もり
    - 各タスクの工数を見積もる
-   - 成果物：docs/estimation.md
+   - 成果物：docs/{project-number}/estimation.md
 3. スコープ調整
    - 工数が[Project Resource]を超える場合、今回のプロジェクトで実施する要件を調整し、[Project Resource]内に収まるようにする
-   - 成果物：docs/scoped_requirements.md
+   - 成果物：docs/{project-number}/scoped_requirements.md
 4. 設計
    - 要件を満たすための設計を行う。スコープ調整を行った場合は、調整後の要件に従う
    4.1. 外部設計
       - ユーザーインターフェースやAPIの仕様を定義する
-      - 成果物：docs/interface_design.md
+      - 成果物：docs/{project-number}/interface_design.md
    4.2. 内部設計
       - システムの内部構造やアルゴリズムの設計を行う
-      - 成果物：docs/internal_design.md
+      - 成果物：docs/{project-number}/internal_design.md
 5. タスク分割
    - 設計を実行可能な単位に分解し、優先順位を決める
    - 1つのタスクはおおむね[Task Resource]以内の工数で完了する粒度にする
-   - 成果物：docs/tasks.md
+   - 成果物：docs/{project-number}/tasks.md
 6. 実装
    - タスクに沿って実装を行う
    - タスクごとに実装が完了したら、成果物を提示し、レビュー依頼を出すこと
@@ -58,4 +56,4 @@ description: プロジェクトの進め方。1.要件定義、2.工数見積も
 7. 動作確認
    - 要件を満たしているか検証し、問題があれば修正する
    - 必要に応じて関数単位のユニットテスト、ブラウザを用いてのE2Eテストを実施する
-   - 成果物：docs/test_results.md
+   - 成果物：docs/{project-number}/test_results.md
